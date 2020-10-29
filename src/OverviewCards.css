@@ -1,0 +1,42 @@
+.card {
+  min-width: 250px;
+  margin-top: 15px;
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #202741;
+  color: white;
+  border-radius: 3px;
+}
+
+.card > div {
+  width: 50%;
+  align-items: flex-end;
+}
+
+.card__mediaIcon,
+.card__todayStats {
+  display: flex;
+  justify-content: flex-end;
+}
+.card__todayCount,
+.card__todayStats {
+  margin-top: 10px;
+}
+
+.card__d {
+  font-size: 17px;
+  letter-spacing: 2px;
+  color: #727ca9;
+}
+.card__todayCount {
+  font-size: 50px;
+}
+
+.facebookIcon {
+  color: #008df8;
+}
+.tweeterIcon {
+  color: #00a0f5;
+}

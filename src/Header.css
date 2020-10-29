@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  color: white;
+}
+
+.header__title {
+  width: 74%;
+}
+
+.header__toggleButton {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header__totalFollow {
+  padding-top: 5px;
+  color: #7c87b5;
+}

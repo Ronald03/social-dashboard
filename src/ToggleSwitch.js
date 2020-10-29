@@ -1,0 +1,82 @@
+import React, { useState } from "react";
+import { withStyles } from "@material-ui/core/styles";
+import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Switch from "@material-ui/core/Switch";
+
+const IOSSwitch = withStyles((theme) => ({
+  root: {
+    width: 52,
+    height: 26,
+    padding: 0,
+    margin: theme.spacing(1),
+  },
+  switchBase: {
+    padding: 1,
+    "&$checked": {
+      transform: "translateX(24px)",
+      color: theme.palette.common.white,
+      "& + $track": {
+        background: "linear-gradient(to right, #2872ac 0%, #31d18c 100%)",
+        opacity: 1,
+        border: "none",
+      },
+    },
+  },
+  thumb: {
+    width: 21,
+    height: 21,
+    marginLeft: 2,
+    marginTop: 1,
+    color: "#202741",
+  },
+  track: {
+    borderRadius: 26 / 2,
+    background: "linear-gradient(to right, #2872ac -17%, #31d18c 80%)",
+    opacity: 1,
+    transition: theme.transitions.create(["background-color", "border"]),
+  },
+  checked: {},
+  focusVisible: {},
+}))(({ classes, ...props }) => {
+  return (
+    <Switch
+      focusVisibleClassName={classes.focusVisible}
+      disableRipple
+      classes={{
+        root: classes.root,
+        switchBase: classes.switchBase,
+        thumb: classes.thumb,
+        track: classes.track,
+        checked: classes.checked,
+      }}
+      {...props}
+    />
+  );
+});
+
+export default function ToggleSwitch() {
+  const [state, setState] = useState({
+    checkedA: true,
+    checkedB: true,
+    checkedC: true,
+  });
+
+  const handleChange = (event) => {
+    setState({ ...state, [event.target.name]: event.target.checked });
+  };
+
+  return (
+    <FormGroup>
+      <FormControlLabel
+        control={
+          <IOSSwitch
+            checked={state.checkedB}
+            onChange={handleChange}
+            name="checkedB"
+          />
+        }
+      />
+    </FormGroup>
+  );
+}

@@ -1,0 +1,73 @@
+.wrapper {
+  padding-top: 5px;
+  border-radius: 5px;
+}
+
+.accountTile {
+  max-width: 350px;
+  min-width: 250px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #202741;
+  color: white;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.fbColor {
+  background: #008df8;
+}
+
+.igColor {
+  background: linear-gradient(to right, #fdc35e 0%, #e24496 100%);
+}
+
+.ytColor {
+  background: #c70020;
+}
+.twColor {
+  background: #00a0f5;
+}
+
+.accountTile > div {
+  display: flex;
+  align-items: center;
+}
+.accountTile__user > span {
+  color: #7c87b5;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.accountTile__count > span {
+  margin-top: 5px;
+  font-size: 78px;
+}
+
+.accountTile__follower > span {
+  color: #7c87b5;
+  letter-spacing: 5px;
+}
+
+.accountTile__todayCount {
+  margin-top: 20px;
+  color: #02ac83;
+}
+
+.igMediaIcon {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  border-radius: 3px;
+  background: linear-gradient(to top right, #fdc35e 0%, #e24496 100%);
+}
+
+.ytMediaIcon {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: #c70020;
+}
